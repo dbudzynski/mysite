@@ -9,9 +9,112 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        .counter-container { margin-top: 120px; text-align: center; }
-        .counter-title { font-size: 2rem; margin-bottom: 2rem; }
-        .counter-value { font-size: 2.2rem; font-family: 'Montserrat', Arial, sans-serif; }
+                .tombstone-rip {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    color: #a00;
+                    letter-spacing: 0.18em;
+                    margin-bottom: 0.2rem;
+                    margin-top: 0.1rem;
+                }
+        .graveyard-container {
+            margin-top: 120px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem 1.5rem;
+            justify-items: center;
+        }
+        .tombstone {
+            background: #e0e0e0;
+            border-radius: 90px 90px 0.7rem 0.7rem;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+            width: 540px;
+            min-height: 570px;
+            height: 570px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.2rem 2.2rem 2.2rem 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            box-sizing: border-box;
+            flex-grow: 1;
+        }
+        .tombstone-initials {
+            font-size: 2.7rem;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 0.7rem;
+            margin-top: 0.5rem;
+            letter-spacing: 0.1em;
+        }
+        .tombstone-label {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 0.7rem;
+        }
+        .tombstone-timer {
+            margin-top: 0.7rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flip-timer {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 1.2rem;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .flip-card-static {
+            background: #f7f7f7;
+            color: #222;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.1rem;
+            border-radius: 0.7rem;
+            width: 68px;
+            min-width: 68px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            border: 1.5px solid #d0d0d0;
+        }
+        .flip-label-row {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 1.2rem;
+            max-width: 480px;
+            margin: 0.18rem auto 0 auto;
+        }
+        .flip-label-static {
+            font-size: 1.05rem;
+            color: #666;
+            text-align: center;
+            font-family: 'Montserrat', Arial, sans-serif;
+            width: 68px;
+            min-width: 68px;
+        }
+        .tombstone-date {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 0.2rem;
+        }
+        @media (max-width: 900px) {
+            .graveyard-container { grid-template-columns: repeat(2, 1fr); }
+            .tombstone { width: 260px; min-height: 170px; padding: 1.2rem 0.5rem 1.2rem 0.5rem; }
+            .flip-card-static { font-size: 1.3rem; min-width: 38px; min-height: 32px; }
+        }
+        @media (max-width: 700px) {
+            .graveyard-container { grid-template-columns: repeat(1, 1fr); gap: 1.2rem 0.5rem; }
+            .tombstone { width: 140px; min-height: 120px; padding: 0.7rem 0.5rem 1rem 0.5rem; }
+            .tombstone-initials { font-size: 1.5rem; }
+            .flip-card-static { font-size: 0.9rem; min-width: 24px; min-height: 18px; }
+        }
     </style>
 </head>
 <body>
@@ -32,36 +135,94 @@
             </div>
         </div>
     </nav>
-    <div class="counter-container">
-        <div class="counter-title">Czas wolności KC (od 30.01.2026 12:00):</div>
-        <div class="counter-value" id="kc-counter">0 lat 0 miesięcy 0 dni 0 godzin 0 minut 0 sekund</div>
+    <div class="graveyard-container">
+        <div class="tombstone" data-initials="KC" data-date="2026-02-02T08:00:00">
+            <div class="tombstone-rip">R.I.P.</div>
+            <div class="tombstone-initials">KC</div>
+            <div class="tombstone-label">Czas od zwolnienia:</div>
+            <div class="tombstone-date">od 02.02.2026 08:00</div>
+            <div class="tombstone-timer" id="timer-KC">
+                <div class="flip-timer" id="flip-KC"></div>
+                <div class="flip-label-row" id="labels-KC"></div>
+            </div>
+        </div>
+        <div class="tombstone" data-initials="AB" data-date="2025-12-15T16:30:00">
+            <div class="tombstone-rip">R.I.P.</div>
+            <div class="tombstone-initials">AB</div>
+            <div class="tombstone-label">Czas od zwolnienia:</div>
+            <div class="tombstone-date">od 15.12.2025 16:30</div>
+            <div class="tombstone-timer" id="timer-AB">
+                <div class="flip-timer" id="flip-AB"></div>
+                <div class="flip-label-row" id="labels-AB"></div>
+            </div>
+        </div>
+        <div class="tombstone" data-initials="XY" data-date="2024-07-01T09:00:00">
+            <div class="tombstone-rip">R.I.P.</div>
+            <div class="tombstone-initials">XY</div>
+            <div class="tombstone-label">Czas od zwolnienia:</div>
+            <div class="tombstone-date">od 01.07.2024 09:00</div>
+            <div class="tombstone-timer" id="timer-XY">
+                <div class="flip-timer" id="flip-XY"></div>
+                <div class="flip-label-row" id="labels-XY"></div>
+            </div>
+        </div>
+        <!-- Dodaj kolejne nagrobki według potrzeb -->
     </div>
     <script>
-        function updateKCCounter() {
-            const start = new Date('2026-01-30T12:00:00');
+        function renderFlipTimer(containerId, labelId, values) {
+            const labels = ['lat', 'miesięcy', 'dni', 'godz.', 'min.', 'sek.'];
+            const keys = ['years', 'months', 'days', 'hours', 'minutes', 'seconds'];
+            const container = document.getElementById(containerId);
+            const labelRow = document.getElementById(labelId);
+            container.innerHTML = '';
+            labelRow.innerHTML = '';
+            for (let i = 0; i < keys.length; i++) {
+                const val = values[keys[i]];
+                const card = document.createElement('div');
+                card.className = 'flip-card-static';
+                card.innerHTML = `<span>${val}</span>`;
+                container.appendChild(card);
+                const label = document.createElement('div');
+                label.className = 'flip-label-static';
+                label.textContent = labels[i];
+                labelRow.appendChild(label);
+            }
+        }
+
+        function updateTombstoneTimer(flipId, startDate) {
+            const labelId = flipId.replace('flip-', 'labels-');
             const now = new Date();
-            let years = now.getFullYear() - start.getFullYear();
-            let months = now.getMonth() - start.getMonth();
-            let days = now.getDate() - start.getDate();
-            let hours = now.getHours() - start.getHours();
-            let minutes = now.getMinutes() - start.getMinutes();
-            let seconds = now.getSeconds() - start.getSeconds();
+            let years = now.getFullYear() - startDate.getFullYear();
+            let months = now.getMonth() - startDate.getMonth();
+            let days = now.getDate() - startDate.getDate();
+            let hours = now.getHours() - startDate.getHours();
+            let minutes = now.getMinutes() - startDate.getMinutes();
+            let seconds = now.getSeconds() - startDate.getSeconds();
 
             if (seconds < 0) { seconds += 60; minutes--; }
             if (minutes < 0) { minutes += 60; hours--; }
             if (hours < 0) { hours += 24; days--; }
             if (days < 0) {
-                // Get days in previous month
                 let prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
                 days += prevMonth.getDate();
                 months--;
             }
             if (months < 0) { months += 12; years--; }
 
-            document.getElementById('kc-counter').textContent = `${years} lat ${months} miesięcy ${days} dni ${hours} godzin ${minutes} minut ${seconds} sekund`;
+            renderFlipTimer(flipId, labelId, { years, months, days, hours, minutes, seconds });
         }
-        setInterval(updateKCCounter, 1000);
-        updateKCCounter();
+
+        function startAllTombstoneTimers() {
+            document.querySelectorAll('.tombstone').forEach(tombstone => {
+                const initials = tombstone.getAttribute('data-initials');
+                const dateStr = tombstone.getAttribute('data-date');
+                const flipId = `flip-${initials}`;
+                const startDate = new Date(dateStr);
+                setInterval(() => updateTombstoneTimer(flipId, startDate), 1000);
+                updateTombstoneTimer(flipId, startDate);
+            });
+        }
+        startAllTombstoneTimers();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

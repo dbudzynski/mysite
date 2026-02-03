@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>KC Counter</title>
+    <title>Cmentarzysko NSP</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -34,7 +34,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2.2rem 2.2rem 2.2rem 2.2rem;
+            padding: 2.2rem 1.2rem 2.2rem 1.2rem;
             margin-bottom: 1.5rem;
             position: relative;
             box-sizing: border-box;
@@ -64,19 +64,20 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
-            gap: 1.2rem;
-            max-width: 480px;
-            margin: 0 auto;
+            gap: 1.1rem;
+            max-width: 330px;
+            margin-left: calc(50% - 165px - 32px);
+            margin-right: auto;
         }
         .flip-card-static {
             background: #f7f7f7;
             color: #222;
             font-family: 'Courier New', Courier, monospace;
-            font-size: 2.1rem;
+            font-size: 1.7rem;
             border-radius: 0.7rem;
-            width: 68px;
-            min-width: 68px;
-            min-height: 48px;
+            width: 52px;
+            min-width: 52px;
+            min-height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -87,17 +88,19 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
-            gap: 1.2rem;
-            max-width: 480px;
-            margin: 0.18rem auto 0 auto;
+            gap: 1.1rem;
+            max-width: 330px;
+            margin-left: calc(50% - 165px - 32px);
+            margin-right: auto;
+            margin-top: 0.18rem;
         }
         .flip-label-static {
             font-size: 1.05rem;
             color: #666;
             text-align: center;
             font-family: 'Montserrat', Arial, sans-serif;
-            width: 68px;
-            min-width: 68px;
+            width: 52px;
+            min-width: 52px;
         }
         .tombstone-date {
             font-size: 0.9rem;
@@ -136,41 +139,42 @@
         </div>
     </nav>
     <div class="graveyard-container">
-        <div class="tombstone" data-initials="KC" data-date="2026-02-02T08:00:00">
+        <div class="tombstone" data-initials="KC" data-date="2026-01-30T12:00:00">
             <div class="tombstone-rip">R.I.P.</div>
             <div class="tombstone-initials">KC</div>
-            <div class="tombstone-label">Czas od zwolnienia:</div>
-            <div class="tombstone-date">od 02.02.2026 08:00</div>
+            <div class="tombstone-label">Czas od zakończenia współpracy:</div>
+            <div class="tombstone-date">od 30.01.2026 12:00</div>
             <div class="tombstone-timer" id="timer-KC">
                 <div class="flip-timer" id="flip-KC"></div>
                 <div class="flip-label-row" id="labels-KC"></div>
             </div>
         </div>
-        <div class="tombstone" data-initials="AB" data-date="2025-12-15T16:30:00">
-            <div class="tombstone-rip">R.I.P.</div>
-            <div class="tombstone-initials">AB</div>
-            <div class="tombstone-label">Czas od zwolnienia:</div>
-            <div class="tombstone-date">od 15.12.2025 16:30</div>
-            <div class="tombstone-timer" id="timer-AB">
-                <div class="flip-timer" id="flip-AB"></div>
-                <div class="flip-label-row" id="labels-AB"></div>
+            <!--
+            <div class="tombstone" data-initials="AB" data-date="2025-12-15T16:30:00">
+                <div class="tombstone-rip">R.I.P.</div>
+                <div class="tombstone-initials">AB</div>
+                <div class="tombstone-label">Czas od zwolnienia:</div>
+                <div class="tombstone-date">od 15.12.2025 16:30</div>
+                <div class="tombstone-timer" id="timer-AB">
+                    <div class="flip-timer" id="flip-AB"></div>
+                    <div class="flip-label-row" id="labels-AB"></div>
+                </div>
             </div>
-        </div>
-        <div class="tombstone" data-initials="XY" data-date="2024-07-01T09:00:00">
-            <div class="tombstone-rip">R.I.P.</div>
-            <div class="tombstone-initials">XY</div>
-            <div class="tombstone-label">Czas od zwolnienia:</div>
-            <div class="tombstone-date">od 01.07.2024 09:00</div>
-            <div class="tombstone-timer" id="timer-XY">
-                <div class="flip-timer" id="flip-XY"></div>
-                <div class="flip-label-row" id="labels-XY"></div>
+            <div class="tombstone" data-initials="XY" data-date="2024-07-01T09:00:00">
+                <div class="tombstone-rip">R.I.P.</div>
+                <div class="tombstone-initials">XY</div>
+                <div class="tombstone-label">Czas od zwolnienia:</div>
+                <div class="tombstone-date">od 01.07.2024 09:00</div>
+                <div class="tombstone-timer" id="timer-XY">
+                    <div class="flip-timer" id="flip-XY"></div>
+                    <div class="flip-label-row" id="labels-XY"></div>
+                </div>
             </div>
-        </div>
-        <!-- Dodaj kolejne nagrobki według potrzeb -->
+            -->
     </div>
     <script>
         function renderFlipTimer(containerId, labelId, values) {
-            const labels = ['lat', 'miesięcy', 'dni', 'godz.', 'min.', 'sek.'];
+            const labels = ['lat', 'msc.', 'dni', 'godz.', 'min.', 'sek.'];
             const keys = ['years', 'months', 'days', 'hours', 'minutes', 'seconds'];
             const container = document.getElementById(containerId);
             const labelRow = document.getElementById(labelId);

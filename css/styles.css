@@ -1,3 +1,133 @@
+
+/* Cementary page styles */
+.tombstone-rip {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #a00;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.2rem;
+  margin-top: 0.1rem;
+}
+.graveyard-header {
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 32px;
+}
+.graveyard-title {
+  font-size: 2.7rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: #a00;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.08em;
+}
+.graveyard-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  font-family: 'Lato', Arial, sans-serif;
+  margin-bottom: 0.2rem;
+}
+.graveyard-container {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 1.5rem;
+  justify-items: center;
+}
+.tombstone {
+  background: #e0e0e0;
+  border-radius: 90px 90px 0.7rem 0.7rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  width: 540px;
+  min-height: 570px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.2rem 1.2rem 2.2rem 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.tombstone-initials {
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 0.7rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
+}
+.tombstone-label {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.7rem;
+}
+.tombstone-timer {
+  margin-top: 0.7rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flip-timer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1.1rem;
+  max-width: 330px;
+  margin-left: calc(50% - 165px - 32px);
+  margin-right: auto;
+}
+.flip-card-static {
+  background: #f7f7f7;
+  color: #222;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.7rem;
+  border-radius: 0.7rem;
+  width: 52px;
+  min-width: 52px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 1.5px solid #d0d0d0;
+}
+.flip-label-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1.1rem;
+  max-width: 330px;
+  margin-left: calc(50% - 165px - 32px);
+  margin-right: auto;
+  margin-top: 0.18rem;
+}
+.flip-label-static {
+  font-size: 1.05rem;
+  color: #666;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  width: 52px;
+  min-width: 52px;
+}
+.tombstone-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+@media (max-width: 900px) {
+  .graveyard-container { grid-template-columns: repeat(2, 1fr); }
+  .tombstone { width: 260px; min-height: 170px; padding: 1.2rem 0.5rem 1.2rem 0.5rem; }
+  .flip-card-static { font-size: 1.3rem; min-width: 38px; min-height: 32px; }
+}
+@media (max-width: 700px) {
+  .graveyard-container { grid-template-columns: repeat(1, 1fr); gap: 1.2rem 0.5rem; }
+  .tombstone { width: 140px; min-height: 120px; padding: 0.7rem 0.5rem 1rem 0.5rem; }
+  .tombstone-initials { font-size: 1.5rem; }
+  .flip-card-static { font-size: 0.9rem; min-width: 24px; min-height: 18px; }
+}
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)

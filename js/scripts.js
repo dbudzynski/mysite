@@ -52,6 +52,7 @@ function createTombstoneElement(tombstoneData) {
         <div class="tombstone-initials">${tombstoneData.initials}</div>
         <div class="tombstone-label">Pracował w latach:</div>
         <div class="tombstone-date">${tombstoneData.tombstoneDate}</div>
+        <div class="tombstone-label">Nie ma go/jej z nami już::</div>
         <div class="tombstone-timer" id="timer-${tombstoneData.initials}">
           <div class="flip-timer" id="flip-${tombstoneData.initials}"></div>
           <div class="flip-label-row" id="labels-${tombstoneData.initials}"></div>

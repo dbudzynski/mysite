@@ -1,71 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>Cmentarzysko NSP</title>
-	<link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-	<link href="css/styles.css" rel="stylesheet" />
-</head>
-<body>
-	<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-		<div class="container">
-			<a class="navbar-brand" href="index.html">Daniel Budzyński</a>
-			<button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				Menu
-				<i class="fas fa-bars"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ms-auto">
-					<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio">Portfolio</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="about.html">About</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#contact">Contact</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded active" href="cementary.html">NSP Cementary</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="graveyard-header">
-		<h1 class="graveyard-title">Cmentarzysko NSP</h1>
-		<p class="graveyard-subtitle">Upamiętnienie byłych pracowników</p>
-	</div>
-	<div class="graveyard-container">
-		<div class="tombstone" data-initials="KC" data-date="2026-01-30T12:00:00">
-			<div class="tombstone-rip">R.I.P.</div>
-			<div class="tombstone-initials">KC</div>
-			<div class="tombstone-label">Pracował w latach:</div>
-			<div class="tombstone-date">30.01.2017 - 30.01.2026 12:00</div>
-			<div class="tombstone-timer" id="timer-KC">
-				<div class="flip-timer" id="flip-KC"></div>
-				<div class="flip-label-row" id="labels-KC"></div>
-			</div>
-		</div>
-			<!--
-			<div class="tombstone" data-initials="AB" data-date="2025-12-15T16:30:00">
-				<div class="tombstone-rip">R.I.P.</div>
-				<div class="tombstone-initials">AB</div>
-				<div class="tombstone-label">Czas od zwolnienia:</div>
-				<div class="tombstone-date">od 15.12.2025 16:30</div>
-				<div class="tombstone-timer" id="timer-AB">
-					<div class="flip-timer" id="flip-AB"></div>
-					<div class="flip-label-row" id="labels-AB"></div>
-				</div>
-			</div>
-			<div class="tombstone" data-initials="XY" data-date="2024-07-01T09:00:00">
-				<div class="tombstone-rip">R.I.P.</div>
-				<div class="tombstone-initials">XY</div>
-				<div class="tombstone-label">Czas od zwolnienia:</div>
-				<div class="tombstone-date">od 01.07.2024 09:00</div>
-				<div class="tombstone-timer" id="timer-XY">
-					<div class="flip-timer" id="flip-XY"></div>
-					<div class="flip-label-row" id="labels-XY"></div>
-				</div>
-			</div>
-			-->
-	</div>
-	<script src="js/scripts.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Cmentarzysko NSP</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Daniel Budzyński</a>
+        <button
+          class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a
+                class="nav-link py-3 px-0 px-lg-3 rounded"
+                href="index.html#portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a
+                class="nav-link py-3 px-0 px-lg-3 rounded"
+                href="index.html#contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a
+                class="nav-link py-3 px-0 px-lg-3 rounded active"
+                href="cementary.html"
+                >NSP Cementary</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="graveyard-header">
+      <h1 class="graveyard-title">Cmentarzysko NSP</h1>
+      <p class="graveyard-subtitle">Upamiętnienie byłych pracowników</p>
+    </div>
+    <div class="graveyard-container" id="graveyardContainer"></div>
+    <script src="data/tombstones.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

@@ -42,6 +42,24 @@ function updateTombstoneTimer(flipId, startDate) {
     renderFlipTimer(flipId, labelId, { years, months, days, hours, minutes, seconds });
 }
 
+function createTombstoneElement(tombstoneData) {
+    const tombstone = document.createElement('div');
+    tombstone.className = 'tombstone';
+    tombstone.setAttribute('data-initials', tombstoneData.initials);
+    tombstone.setAttribute('data-date', tombstoneData.date);
+    tombstone.innerHTML = `
+        <div class="tombstone-rip">R.I.P.</div>
+        <div class="tombstone-initials">${tombstoneData.initials}</div>
+        <div class="tombstone-label">Pracował w latach:</div>
+        <div class="tombstone-date">${tombstoneData.tombstoneDate}</div>
+        <div class="tombstone-timer" id="timer-${tombstoneData.initials}">
+          <div class="flip-timer" id="flip-${tombstoneData.initials}"></div>
+          <div class="flip-label-row" id="labels-${tombstoneData.initials}"></div>
+        </div>
+    `;
+    return tombstone;
+}
+
 function startAllTombstoneTimers() {
     document.querySelectorAll('.tombstone').forEach(tombstone => {
         const initials = tombstone.getAttribute('data-initials');
@@ -53,7 +71,33 @@ function startAllTombstoneTimers() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', startAllTombstoneTimers);
+function loadAndRenderTombstones() {
+    try {
+        if (typeof tombstonesData === 'undefined') {
+            throw new Error('tombstonesData not found');
+        }
+        
+        // Sortowanie po dacie - najnowsze na górze
+        const sortedTombstones = tombstonesData.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date);
+        });
+        
+        const container = document.getElementById('graveyardContainer');
+        
+        if (container) {
+            sortedTombstones.forEach(tombstoneData => {
+                const tombstoneElement = createTombstoneElement(tombstoneData);
+                container.appendChild(tombstoneElement);
+            });
+            
+            startAllTombstoneTimers();
+        }
+    } catch (error) {
+        console.error('Error loading tombstones:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadAndRenderTombstones);
 /*!
 * Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
 * Copyright 2013-2023 Start Bootstrap

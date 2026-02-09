@@ -4,7 +4,7 @@ const tombstonesData = [
     "date": "2026-01-30T12:00:00",
     "tombstoneDate": "30.01.2017 - 30.01.2026"
   },
-  {
+{
     "initials": "AdPo",
     "date": "2022-10-01T00:00:00",
     "tombstoneDate": "01.10.2018 - 01.10.2022"
@@ -20,7 +20,7 @@ const tombstonesData = [
     "tombstoneDate": "01.10.2017 - 01.01.2020"
   },
   {
-    "initials": "ArSza",
+    "initials": "ArSz",
     "date": "2021-01-01T00:00:00",
     "tombstoneDate": "15.07.2019 - 01.01.2021"
   },
@@ -40,7 +40,7 @@ const tombstonesData = [
     "tombstoneDate": "01.09.2015 - 01.09.2016"
   },
   {
-    "initials": "DarDu",
+    "initials": "DaDu",
     "date": "2017-12-01T00:00:00",
     "tombstoneDate": "01.02.2016 - 01.12.2017"
   },
@@ -50,7 +50,7 @@ const tombstonesData = [
     "tombstoneDate": "01.09.2017 - 01.09.2021"
   },
   {
-    "initials": "DoSzc",
+    "initials": "DoSz",
     "date": "2020-12-01T00:00:00",
     "tombstoneDate": "01.09.2020 - 01.12.2020"
   },
@@ -65,7 +65,7 @@ const tombstonesData = [
     "tombstoneDate": "01.11.2023 - 01.09.2025"
   },
   {
-    "initials": "JaSta",
+    "initials": "JaSt",
     "date": "2025-08-01T00:00:00",
     "tombstoneDate": "03.07.2023 - 01.08.2025"
   },
@@ -75,7 +75,7 @@ const tombstonesData = [
     "tombstoneDate": "01.09.2017 - 01.12.2019"
   },
   {
-    "initials": "JanLi",
+    "initials": "JaLi",
     "date": "2020-03-01T00:00:00",
     "tombstoneDate": "02.12.2019 - 01.03.2020"
   },
@@ -90,7 +90,7 @@ const tombstonesData = [
     "tombstoneDate": "18.06.2018 - 01.12.2020"
   },
   {
-    "initials": "KarCy",
+    "initials": "KaCy",
     "date": "2018-08-01T00:00:00",
     "tombstoneDate": "16.08.2016 - 01.08.2018"
   },
@@ -101,8 +101,8 @@ const tombstonesData = [
   },
   {
     "initials": "KrFi",
-    "date": "2024-05-01T00:00:00",
-    "tombstoneDate": "20.02.2023 - 01.05.2024"
+    "date": "2025-05-01T00:00:00",
+    "tombstoneDate": "20.02.2023 - 01.05.2025"
   },
   {
     "initials": "KrCh",
@@ -115,53 +115,153 @@ const tombstonesData = [
     "tombstoneDate": "01.10.2018 - 01.06.2019"
   },
   {
-    "initials": "MagSz",
+    "initials": "MaSzu",
     "date": "2021-03-01T00:00:00",
     "tombstoneDate": "16.09.2014 - 01.03.2021"
   },
   {
-    "initials": "MarCe",
+    "initials": "MarcCe",
     "date": "2025-07-16T00:00:00",
     "tombstoneDate": "01.03.2023 - 16.07.2025"
   },
   {
-    "initials": "MarMa",
+    "initials": "MaMa",
     "date": "2023-04-01T00:00:00",
     "tombstoneDate": "05.05.2021 - 01.04.2023"
   },
   {
-    "initials": "MarJa",
+    "initials": "MaJa",
     "date": "2024-03-01T00:00:00",
     "tombstoneDate": "01.03.2023 - 01.03.2024"
   },
   {
-    "initials": "MareWo",
+    "initials": "MaWo",
     "date": "2016-09-04T00:00:00",
     "tombstoneDate": "01.04.2016 - 04.09.2016"
   },
   {
-    "initials": "MariGo",
+    "initials": "MaGo",
     "date": "2020-04-01T00:00:00",
     "tombstoneDate": "17.09.2018 - 01.04.2020"
   },
   {
-    "initials": "MartMo",
+    "initials": "MaMo",
     "date": "2019-01-01T00:00:00",
     "tombstoneDate": "16.09.2014 - 01.01.2019"
   },
   {
-    "initials": "MartyMa",
+    "initials": "MartMa",
     "date": "2023-11-01T00:00:00",
     "tombstoneDate": "17.02.2020 - 01.11.2023"
   },
   {
-    "initials": "MatMa",
+    "initials": "MatMaz",
     "date": "2017-07-01T00:00:00",
     "tombstoneDate": "01.09.2016 - 01.07.2017"
   },
   {
-    "initials": "MatSt",
+    "initials": "MatSta",
     "date": "2021-06-01T00:00:00",
     "tombstoneDate": "01.07.2019 - 01.06.2021"
+  },
+  {
+    "initials": "MiMi",
+    "date": "2022-12-06T00:00:00",
+    "tombstoneDate": "26.09.2022 - 06.12.2022"
+  },
+  {
+    "initials": "MiKo",
+    "date": "2017-06-01T00:00:00",
+    "tombstoneDate": "01.08.2016 - 01.06.2017"
+  },
+  {
+    "initials": "MiBa",
+    "date": "2024-01-01T00:00:00",
+    "tombstoneDate": "24.04.2023 - 01.01.2024"
+  },
+  {
+    "initials": "NaKo",
+    "date": "2023-10-01T00:00:00",
+    "tombstoneDate": "01.11.2022 - 01.10.2023"
+  },
+  {
+    "initials": "OlSy",
+    "date": "2022-12-19T00:00:00",
+    "tombstoneDate": "19.09.2022 - 19.12.2022"
+  },
+  {
+    "initials": "OlMa",
+    "date": "2016-06-01T00:00:00",
+    "tombstoneDate": "01.06.2015 - 01.06.2016"
+  },
+  {
+    "initials": "PaSo",
+    "date": "2018-08-17T00:00:00",
+    "tombstoneDate": "01.03.2018 - 17.08.2018"
+  },
+  {
+    "initials": "PaPi",
+    "date": "2019-02-01T00:00:00",
+    "tombstoneDate": "01.12.2018 - 01.02.2019"
+  },
+  {
+    "initials": "PaSł",
+    "date": "2020-12-15T00:00:00",
+    "tombstoneDate": "01.12.2019 - 15.12.2020"
+  },
+  {
+    "initials": "PaCh",
+    "date": "2021-09-01T00:00:00",
+    "tombstoneDate": "17.02.2020 - 01.09.2021"
+  },
+  {
+    "initials": "PiLa",
+    "date": "2017-07-01T00:00:00",
+    "tombstoneDate": "01.10.2015 - 01.07.2017"
+  },
+  {
+    "initials": "PiGo",
+    "date": "2020-12-01T00:00:00",
+    "tombstoneDate": "01.09.2017 - 01.12.2020"
+  },
+  {
+    "initials": "PrKa",
+    "date": "2022-11-06T00:00:00",
+    "tombstoneDate": "12.05.2022 - 06.11.2022"
+  },
+  {
+    "initials": "RaKa",
+    "date": "2017-12-01T00:00:00",
+    "tombstoneDate": "16.09.2016 - 01.12.2017"
+  },
+  {
+    "initials": "RaRu",
+    "date": "2025-03-01T00:00:00",
+    "tombstoneDate": "17.04.2023 - 01.03.2025"
+  },
+  {
+    "initials": "RoGo",
+    "date": "2019-06-15T00:00:00",
+    "tombstoneDate": "01.04.2019 - 15.06.2019"
+  },
+  {
+    "initials": "SaMa",
+    "date": "2020-06-24T00:00:00",
+    "tombstoneDate": "17.02.2020 - 24.06.2020"
+  },
+  {
+    "initials": "SzCh",
+    "date": "2022-10-01T00:00:00",
+    "tombstoneDate": "01.09.2021 - 01.10.2022"
+  },
+  {
+    "initials": "TeKr",
+    "date": "2018-01-01T00:00:00",
+    "tombstoneDate": "01.07.2016 - 01.01.2018"
+  },
+  {
+    "initials": "ViUm",
+    "date": "2022-11-01T00:00:00",
+    "tombstoneDate": "08.08.2022 - 01.11.2022"
   }
 ];
